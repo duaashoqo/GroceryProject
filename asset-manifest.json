@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Grocery_App/static/css/main.90c79510.chunk.css",
-    "main.js": "/Grocery_App/static/js/main.4f3e2002.chunk.js",
-    "main.js.map": "/Grocery_App/static/js/main.4f3e2002.chunk.js.map",
+    "main.js": "/Grocery_App/static/js/main.6625f4a4.chunk.js",
+    "main.js.map": "/Grocery_App/static/js/main.6625f4a4.chunk.js.map",
     "runtime-main.js": "/Grocery_App/static/js/runtime-main.27f705b1.js",
     "runtime-main.js.map": "/Grocery_App/static/js/runtime-main.27f705b1.js.map",
     "static/css/2.f3f01324.chunk.css": "/Grocery_App/static/css/2.f3f01324.chunk.css",
@@ -36,6 +36,6 @@
     "static/css/2.f3f01324.chunk.css",
     "static/js/2.478755b4.chunk.js",
     "static/css/main.90c79510.chunk.css",
-    "static/js/main.4f3e2002.chunk.js"
+    "static/js/main.6625f4a4.chunk.js"
   ]
 }
