@@ -73,11 +73,11 @@ OnlineMarketItem.map(item=>(!CategoriesName.includes(item.Category))?AddToCatego
      <Route exact path="/Account">
      {isAuth?<Account/>:<LogIn/>}
      </Route>
-     <Route exact path="/CheckOut">
+     <Route exact path="/CheckOut" >
      {isAuth?<CheckOut MyItem={MyItem}/>:<LogIn/>}
      </Route>
      
-     <Route exact path="/">
+     <Route  path="/">
      <Start/>
      </Route>
      
