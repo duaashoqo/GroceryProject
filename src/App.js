@@ -44,7 +44,7 @@ OnlineMarketItem.map(item=>(!CategoriesName.includes(item.Category))?AddToCatego
 
 
   return (
-    <Router basename="/GroceryApp">
+    <Router basename="/Grocery_App">
      <div> 
      <Route  path="/ProductDetail">
      {isAuth?<ProductDetail setMyFav={setMyFav}  MyFav={MyFav} DetailedItem={DetailedItem} setDetailedItem={setDetailedItem} MyItem={MyItem} setMyItem={setMyItem} />:<LogIn/>}
