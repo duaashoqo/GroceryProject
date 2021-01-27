@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Grocery_App/static/css/main.90c79510.chunk.css",
-    "main.js": "/Grocery_App/static/js/main.dc57cefb.chunk.js",
-    "main.js.map": "/Grocery_App/static/js/main.dc57cefb.chunk.js.map",
+    "main.css": "/Grocery_App/static/css/main.ea729e99.chunk.css",
+    "main.js": "/Grocery_App/static/js/main.abdfe97b.chunk.js",
+    "main.js.map": "/Grocery_App/static/js/main.abdfe97b.chunk.js.map",
     "runtime-main.js": "/Grocery_App/static/js/runtime-main.27f705b1.js",
     "runtime-main.js.map": "/Grocery_App/static/js/runtime-main.27f705b1.js.map",
     "static/css/2.f3f01324.chunk.css": "/Grocery_App/static/css/2.f3f01324.chunk.css",
-    "static/js/2.478755b4.chunk.js": "/Grocery_App/static/js/2.478755b4.chunk.js",
-    "static/js/2.478755b4.chunk.js.map": "/Grocery_App/static/js/2.478755b4.chunk.js.map",
+    "static/js/2.994f524b.chunk.js": "/Grocery_App/static/js/2.994f524b.chunk.js",
+    "static/js/2.994f524b.chunk.js.map": "/Grocery_App/static/js/2.994f524b.chunk.js.map",
     "static/js/3.420b81dc.chunk.js": "/Grocery_App/static/js/3.420b81dc.chunk.js",
     "static/js/3.420b81dc.chunk.js.map": "/Grocery_App/static/js/3.420b81dc.chunk.js.map",
     "index.html": "/Grocery_App/index.html",
     "static/css/2.f3f01324.chunk.css.map": "/Grocery_App/static/css/2.f3f01324.chunk.css.map",
-    "static/css/main.90c79510.chunk.css.map": "/Grocery_App/static/css/main.90c79510.chunk.css.map",
-    "static/js/2.478755b4.chunk.js.LICENSE.txt": "/Grocery_App/static/js/2.478755b4.chunk.js.LICENSE.txt",
+    "static/css/main.ea729e99.chunk.css.map": "/Grocery_App/static/css/main.ea729e99.chunk.css.map",
+    "static/js/2.994f524b.chunk.js.LICENSE.txt": "/Grocery_App/static/js/2.994f524b.chunk.js.LICENSE.txt",
     "static/media/Style.css": "/Grocery_App/static/media/man2.2094f548.jpg",
     "static/media/BakeryASnacks.c1211787.jpeg": "/Grocery_App/static/media/BakeryASnacks.c1211787.jpeg",
     "static/media/Beverages.5a6596d8.jpg": "/Grocery_App/static/media/Beverages.5a6596d8.jpg",
@@ -34,8 +34,8 @@
   "entrypoints": [
     "static/js/runtime-main.27f705b1.js",
     "static/css/2.f3f01324.chunk.css",
-    "static/js/2.478755b4.chunk.js",
-    "static/css/main.90c79510.chunk.css",
-    "static/js/main.dc57cefb.chunk.js"
+    "static/js/2.994f524b.chunk.js",
+    "static/css/main.ea729e99.chunk.css",
+    "static/js/main.abdfe97b.chunk.js"
   ]
 }
