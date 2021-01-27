@@ -44,7 +44,7 @@ OnlineMarketItem.map(item=>(!CategoriesName.includes(item.Category))?AddToCatego
 
 
   return (
-    <Router>
+    <Router basename="/Start">
      <div> 
      <Route  path="/ProductDetail">
      {isAuth?<ProductDetail setMyFav={setMyFav}  MyFav={MyFav} DetailedItem={DetailedItem} setDetailedItem={setDetailedItem} MyItem={MyItem} setMyItem={setMyItem} />:<LogIn/>}
@@ -77,7 +77,7 @@ OnlineMarketItem.map(item=>(!CategoriesName.includes(item.Category))?AddToCatego
      {isAuth?<CheckOut MyItem={MyItem}/>:<LogIn/>}
      </Route>
      
-     <Route exact path="/Start">
+     <Route exact path="/">
      <Start/>
      </Route>
      
