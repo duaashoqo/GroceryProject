@@ -6,7 +6,7 @@ import Account from './Pages/Account';
 import Home from './Pages/Home';
 import Explore from './Pages/Explore';
 import Data from './AppData/Data';
-import MyCart from './Component/MyCart';
+import MyCart from './Pages/MyCart';
 import ProductDetail from './Pages/ProductDetail';
 import Product from './Component/Product';
 import Favorites from './Pages/Favorites';
@@ -44,7 +44,7 @@ OnlineMarketItem.map(item=>(!CategoriesName.includes(item.Category))?AddToCatego
 
 
   return (
-    <Router basename="/Start">
+    <Router basename="/GroceryApp">
      <div> 
      <Route  path="/ProductDetail">
      {isAuth?<ProductDetail setMyFav={setMyFav}  MyFav={MyFav} DetailedItem={DetailedItem} setDetailedItem={setDetailedItem} MyItem={MyItem} setMyItem={setMyItem} />:<LogIn/>}

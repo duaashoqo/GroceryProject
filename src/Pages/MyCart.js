@@ -1,9 +1,9 @@
 import '../Style.css';
 import Divider from '@material-ui/core/Divider';
-import Title from './Title';
+import Title from '../Component/Title';
 import React from 'react';
-import MyItem from './MyItem';
-import Navigation from './Navigation';
+import MyItem from '../Component/MyItem';
+import Navigation from '../Component/Navigation';
 import {useHistory} from "react-router-dom";
 
 
