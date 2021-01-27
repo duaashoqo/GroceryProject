@@ -1,16 +1,21 @@
 import firebase from 'firebase';
-import {useHistory} from "react-router-dom";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Button from '@material-ui/core/Button';
 import Title from '../Component/Title';
 import Navigation from '../Component/Navigation';
 import Divider from '@material-ui/core/Divider';
-
+import {useLocation} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 
 export default function Account() {
-    const history=useHistory();
+    let history = useHistory();
+    let location = useLocation();
+    const {state} = location;
+    if(state === undefined){
+      history.replace("/LogIn")
+    }
     function LogOut(){
         firebase.auth().signOut().then(() => {
             history.push("/LogIn");

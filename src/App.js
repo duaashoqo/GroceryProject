@@ -8,7 +8,7 @@ import Explore from './Pages/Explore';
 import Data from './AppData/Data';
 import MyCart from './Pages/MyCart';
 import ProductDetail from './Pages/ProductDetail';
-import Product from './Component/Product';
+import Product from './Pages/Product';
 import Favorites from './Pages/Favorites';
 import React, { useState } from 'react';
 import CheckOut from './Pages/CheckOut';
@@ -47,22 +47,22 @@ OnlineMarketItem.map(item=>(!CategoriesName.includes(item.Category))?AddToCatego
     <Router basename="/Grocery_App">
      <div> 
      <Route  path="/ProductDetail">
-     {isAuth?<ProductDetail setMyFav={setMyFav}  MyFav={MyFav} DetailedItem={DetailedItem} setDetailedItem={setDetailedItem} MyItem={MyItem} setMyItem={setMyItem} />:<LogIn/>}
+      <ProductDetail setMyFav={setMyFav}  MyFav={MyFav} DetailedItem={DetailedItem} setDetailedItem={setDetailedItem} MyItem={MyItem} setMyItem={setMyItem} />
      </Route>
      <Route  path="/Explore">
-     {isAuth?<Explore Categories={Categories} setSelectedCategory={setSelectedCategory} OnlineMarketItem={OnlineMarketItem} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem} />:<LogIn/>}
+      <Explore Categories={Categories} setSelectedCategory={setSelectedCategory} OnlineMarketItem={OnlineMarketItem} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem} />
      </Route>
      <Route  path="/Product">
-     {isAuth?<Product SelectedCategory={SelectedCategory} OnlineMarketItem={OnlineMarketItem} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem}/>:<LogIn/>}
+      <Product SelectedCategory={SelectedCategory} OnlineMarketItem={OnlineMarketItem} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem}/>
      </Route>
      <Route  path="/MyCart">
-     {isAuth?<MyCart MyItems={MyItem} setMyItems={setMyItem} />:<LogIn/>}
+      <MyCart MyItems={MyItem} setMyItems={setMyItem} />
      </Route>
      <Route  path="/Favorites">
-     {isAuth?<Favorites MyFavorite={MyFav} setMyItem={setMyItem} MyItem={MyItem} setDetailedItem={setDetailedItem}/>:<LogIn/>}
+      <Favorites MyFavorite={MyFav} setMyItem={setMyItem} MyItem={MyItem} setDetailedItem={setDetailedItem}/>
      </Route>
      <Route  path="/Home">
-     {isAuth?<Home OnlineMarketItem={OnlineMarketItem}  Categories={Categories} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem} />:<LogIn/>}                                                                             
+     <Home OnlineMarketItem={OnlineMarketItem}  Categories={Categories} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem} />                                                                             
      </Route>
      <Route  path="/LogIn">
      <LogIn setIsAuth={setIsAuth}/>
@@ -71,10 +71,10 @@ OnlineMarketItem.map(item=>(!CategoriesName.includes(item.Category))?AddToCatego
      <SignUp setIsAuth={setIsAuth}/>
      </Route>
      <Route  path="/Account">
-     {isAuth?<Account/>:<LogIn/>}
+      <Account/>
      </Route>
      <Route  path="/CheckOut" >
-     {isAuth?<CheckOut MyItem={MyItem}/>:<LogIn/>}
+      <CheckOut MyItem={MyItem}/>
      </Route>
      
      <Route exact path="/">

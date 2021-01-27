@@ -11,6 +11,8 @@ import Grid from '@material-ui/core/Grid';
 import Navigation from '../Component/Navigation';
 import Group from '../Component/Group';
 import {Link} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 
@@ -23,6 +25,12 @@ function Home(props) {
     const[GroupClicked,setGroupClicked]=useState(false);
     const[Cat,setCat]=useState(" ");
     const[Value, setValue] = useState(" ");
+    let history = useHistory();
+  let location = useLocation();
+  const {state} = location;
+  if(state === undefined){
+    history.replace("/LogIn")
+  }
 
     function handleChange(e){
       setChange(true)
@@ -40,7 +48,7 @@ function Home(props) {
     <div class="flexRow" style={{ width: '100%',marginTop: 20,}}> 
     <span className="location"> Online Grocery</span>
     <Search placeholder="Search Store" onChange={handleChange} onEnter={handleChange}  />
-    <Link to="/MyCart"><LocalGroceryStoreIcon className="store" /></Link>
+    <Link to={{pathname: "/MyCart",state: { auth:true}}}><LocalGroceryStoreIcon className="store" /></Link>
     </div>
 
     <Carousel autoplay style={{marginLeft:10,marginRight:10}}>

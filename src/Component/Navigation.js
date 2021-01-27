@@ -23,15 +23,30 @@ function Navigation() {
      <BottomNavigation  style={{marginTop:10,marginRight:15,justifyContent:'space-between'}}
       value={Value}
       onChange={(event, newValue)=>{setValue(newValue)}} showLabels>
-    <div className="flexCol"><div><Link to="/Home"><BottomNavigationAction label="Shop" icon={<StoreIcon style={{color:"gray"}}/>} /></Link></div>
+    <div className="flexCol"><div><Link to={{
+    pathname: "/Home",
+    state: { auth:true}
+  }}><BottomNavigationAction label="Shop" icon={<StoreIcon style={{color:"gray"}}/>} /></Link></div>
     <div><label style={{marginLeft:25}}>shop</label></div> </div>
-    <div className="flexCol"><div><Link to="/Explore"><BottomNavigationAction label="Explore"  icon={<SearchIcon style={{color:"blue"}} />}/></Link></div>
+    <div className="flexCol"><div><Link to={{
+    pathname: "/Explore",
+    state: { auth:true}
+  }}><BottomNavigationAction label="Explore"  icon={<SearchIcon style={{color:"blue"}} />}/></Link></div>
     <div><label style={{marginLeft:18}}>Explore</label></div> </div>
-    <div className="flexCol"><div><Link to="/MyCart"><BottomNavigationAction label="Cart" icon={<ShoppingCartIcon style={{color:"green"}}/>}/></Link></div>
+    <div className="flexCol"><div><Link to={{
+    pathname: "/MyCart",
+    state: { auth:true}
+  }}><BottomNavigationAction label="Cart" icon={<ShoppingCartIcon style={{color:"green"}}/>}/></Link></div>
     <div><label style={{marginLeft:18}}>My Cart</label></div> </div>
-    <div className="flexCol"><div><Link to="/Favorites"><BottomNavigationAction label="Favorite" icon={<FavoriteIcon style={{color:"red"}}/>}/></Link></div>
+    <div className="flexCol"><div><Link to={{
+    pathname: "/Favorites",
+    state: { auth:true}
+  }}><BottomNavigationAction label="Favorite" icon={<FavoriteIcon style={{color:"red"}}/>}/></Link></div>
     <div><label style={{marginLeft:18}}>Favorite</label></div> </div>
-    <div className="flexCol"><div><Link to="/Account"><BottomNavigationAction label="Account" icon={<PermIdentityIcon style={{color:"black"}} />} /></Link></div>
+    <div className="flexCol"><div><Link to={{
+    pathname: "/Account",
+    state: { auth:true}
+  }}><BottomNavigationAction label="Account" icon={<PermIdentityIcon style={{color:"black"}} />} /></Link></div>
     <div><label style={{marginLeft:18}}>Account</label></div> </div>
      </BottomNavigation> 
 

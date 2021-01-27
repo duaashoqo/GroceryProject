@@ -11,13 +11,19 @@ import {  Input } from 'antd';
 import Grid from '@material-ui/core/Grid';
 import Navigation from '../Component/Navigation';
 import {Link} from "react-router-dom";
-
-
+import {useLocation} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 
 function Explore(props) {
   const{ Categories,setSelectedCategory,OnlineMarketItem, MyFav,MyItem,setDetailedItem}=props;
+  let history = useHistory();
+  let location = useLocation();
+  const {state} = location;
+  if(state === undefined){
+    history.replace("/LogIn")
+  }
     const { Search } = Input;
     const [Change,setChange]=useState(false);
     const [Value, setValue] = useState(" ");
@@ -37,7 +43,7 @@ function Explore(props) {
 <Title text="Find Product"></Title>
 <div  class="flexRow">
 <Search placeholder="Search Store" onChange={handleChange} onEnter={handleChange}  />
-  <Link to="/MyCart"><LocalGroceryStoreIcon className="store" /></Link>
+  <Link to={{pathname: "/MyCart",state: { auth:true}}} ><LocalGroceryStoreIcon className="store" /></Link>
   </div>
   <Grid container direction="row" style={{ justifyContent:'flex-start', marginTop:10,marginLeft:10,marginRight:10}} spacing={3}>
   {(Change)?OnlineMarketItem.map(item =>(item.Name.includes(Value))?<HomeItem item={item}  MyFav={MyFav} MyItem={MyItem}  setDetailedItem={setDetailedItem} ></HomeItem>:null)

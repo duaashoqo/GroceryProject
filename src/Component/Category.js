@@ -7,12 +7,13 @@ function Category(props) {
     const {img,text,className,setSelectedCategory}=props;
     function setValue(){
       setSelectedCategory(text);
+    
     }
   return (
     <>
     <div style={{marginTop:'2%'}}>
           <Grid item xs={6} sm={3}>
-         <Link to="/Product"><button class={className} style={{marginRight:15}} onClick={setValue} >
+         <Link to={{pathname: "/Product",state: { auth:true}}}><button class={className} style={{marginRight:15}} onClick={setValue} >
           <div > <img className="img1" src={img} alt="dodod"/></div>
           <label>{text}</label>
           </button></Link> 

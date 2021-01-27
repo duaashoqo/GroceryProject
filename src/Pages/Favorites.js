@@ -4,10 +4,17 @@ import Title from '../Component/Title';
 import MyFav from '../Component/MyFav';
 import Navigation from '../Component/Navigation';
 import React from 'react';
-
+import {useLocation} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function Favorites(props) {
   const{MyFavorite,setMyItem,MyItem,setDetailedItem}=props;
+  let history = useHistory();
+  let location = useLocation();
+  const {state} = location;
+  if(state === undefined){
+    history.replace("/LogIn")
+  }
 function AddToCart(){
   if(MyItem.length>0){
   let flag=false;
@@ -46,7 +53,7 @@ MyFavorite.splice(0, MyFavorite.length)
     <Title text="Favorites"></Title>
     <div style={{marginTop:10}}>  <Divider /></div>
    { MyFavorite.length>0?MyFavorite.map(item => <MyFav item={item} setDetailedItem={setDetailedItem}></MyFav>):<div className="NoItem">No item in favorite.</div>}
-    <button className="btn2" onClick={AddToCart} >Add All to Cart</button>
+   { MyFavorite.length>0?<button className="btn2" onClick={AddToCart} >Add All to Cart</button>:null}
     <Navigation/>
 
        

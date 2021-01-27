@@ -34,7 +34,7 @@ function LogIn(props) {
       .then((user) => {
        console.log(user);
        setIsAuth(true);
-       history.push("/Home");
+       history.replace("/Home",{auth:true}); 
     
       })
       .catch((error) => {

@@ -58,7 +58,7 @@ function HomeItem(props) {
       (MyItem.length>0)?MyItem.forEach(i=>(item.Key===i.Key)?count=i.Count:null):count=0;
       (MyFav.length>0)?MyFav.forEach(i=>(item.Key===i.Key)?InFAV=i.InFav:null):InFAV=false;
       setDetailedItem({Name:item.Name,Weight:item.Weight,Price:item.Price,Img:item.Img,Description:item.Description,N:item.N,Review:item.Review,Count:count,InFav:InFAV,Key:item.Key})
-      history.push("/ProductDetail");
+      history.push("/ProductDetail",{auth:true});
     }
 
 

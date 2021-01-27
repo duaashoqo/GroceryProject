@@ -10,7 +10,7 @@ import * as yup from 'yup';
 let schema = yup.object().shape({
   User: yup.string().required(),
   email: yup.string().email().required(),
-  password: yup.string().required('Password is required'),
+  password: yup.string().required('Password is required').min(6),
 
  
 });
@@ -55,6 +55,7 @@ function SignUp(props) {
       .then((user) => {
         console.log(user);
         setIsAuth(true);
+        
         history.push("/LogIn");      
       })
       .catch((error) => {

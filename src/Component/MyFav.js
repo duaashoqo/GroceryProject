@@ -15,7 +15,7 @@ import { useHistory } from "react-router-dom";
 
 function setValue(){     
   setDetailedItem({Name:item.Name,Weight:item.Weight,Price:item.Price,Img:item.Img,Description:item.Description,N:item.N,Review:item.Review,Count:item.Count,InFav:item.InFav,Key:item.Key})
-  history.push("/ProductDetail");
+  history.push("/ProductDetail",{auth:true});
 
 
 }
