@@ -46,38 +46,38 @@ OnlineMarketItem.map(item=>(!CategoriesName.includes(item.Category))?AddToCatego
   return (
     <Router>
      <div> 
-     <Route exact path="/ProductDetail">
+     <Route  path="/ProductDetail">
      {isAuth?<ProductDetail setMyFav={setMyFav}  MyFav={MyFav} DetailedItem={DetailedItem} setDetailedItem={setDetailedItem} MyItem={MyItem} setMyItem={setMyItem} />:<LogIn/>}
      </Route>
-     <Route exact path="/Explore">
+     <Route  path="/Explore">
      {isAuth?<Explore Categories={Categories} setSelectedCategory={setSelectedCategory} OnlineMarketItem={OnlineMarketItem} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem} />:<LogIn/>}
      </Route>
-     <Route exact path="/Product">
+     <Route  path="/Product">
      {isAuth?<Product SelectedCategory={SelectedCategory} OnlineMarketItem={OnlineMarketItem} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem}/>:<LogIn/>}
      </Route>
-     <Route exact path="/MyCart">
+     <Route  path="/MyCart">
      {isAuth?<MyCart MyItems={MyItem} setMyItems={setMyItem} />:<LogIn/>}
      </Route>
-     <Route exact path="/Favorites">
+     <Route  path="/Favorites">
      {isAuth?<Favorites MyFavorite={MyFav} setMyItem={setMyItem} MyItem={MyItem} setDetailedItem={setDetailedItem}/>:<LogIn/>}
      </Route>
-     <Route exact path="/Home">
+     <Route  path="/Home">
      {isAuth?<Home OnlineMarketItem={OnlineMarketItem}  Categories={Categories} MyFav={MyFav} MyItem={MyItem} setDetailedItem={setDetailedItem} />:<LogIn/>}                                                                             
      </Route>
-     <Route exact path="/LogIn">
+     <Route  path="/LogIn">
      <LogIn setIsAuth={setIsAuth}/>
      </Route>
-     <Route exact path="/SignUp">
+     <Route  path="/SignUp">
      <SignUp setIsAuth={setIsAuth}/>
      </Route>
-     <Route exact path="/Account">
+     <Route  path="/Account">
      {isAuth?<Account/>:<LogIn/>}
      </Route>
-     <Route exact path="/CheckOut" >
+     <Route  path="/CheckOut" >
      {isAuth?<CheckOut MyItem={MyItem}/>:<LogIn/>}
      </Route>
      
-     <Route  path="/">
+     <Route exact path="/Start">
      <Start/>
      </Route>
      
