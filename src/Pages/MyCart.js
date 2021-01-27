@@ -16,7 +16,7 @@ function MyCart(props) {
   let totalPrice=0;
   if(MyItems.length>0){
   MyItems.forEach(
-  i=>totalPrice+=i.Price*i.Count)
+  i=>totalPrice+=(i.Price*i.Count))
  }
 function CheckOut(){
   if(MyItems.length>0){
@@ -24,7 +24,7 @@ function CheckOut(){
 
 }}
 
-totalPrice.toFixed(3);
+totalPrice=parseFloat(totalPrice.toFixed(2));
 
   return (
     <>
